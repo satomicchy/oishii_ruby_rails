@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Shoppings</h1>
+<h1>お買い物リスト</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Unit</th>
-      <th>Memo</th>
-      <th colspan="3"></th>
+      <th>品名</th>
+      <th>数量</th>
+      <th>メモ</th>
+      <th colspan="2""></th>
     </tr>
   </thead>
 
@@ -18,9 +18,8 @@
         <td><%= shopping.name %></td>
         <td><%= shopping.unit %></td>
         <td><%= shopping.memo %></td>
-        <td><%= link_to 'Show', shopping %></td>
-        <td><%= link_to 'Edit', edit_shopping_path(shopping) %></td>
-        <td><%= link_to 'Destroy', shopping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編集', edit_shopping_path(shopping) %></td>
+        <td><%= link_to '削除', shopping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Shopping', new_shopping_path %>
+<%= link_to '新しいお買い物', new_shopping_path %>
